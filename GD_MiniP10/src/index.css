@@ -1,0 +1,263 @@
+/* -------- SCROLLING & SNAP -------- */
+.container {
+  height: 100vh;
+  width: 100vw;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  background: url("./img/bg.jpeg");
+}
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+/* -------- SECTIONS -------- */
+.hero-section,
+.who-section,
+.works-section,
+.contact-section {
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  position: relative;
+}
+
+/* -------- HERO SECTION -------- */
+.hero-container {
+  height: 100%;
+  width: 1400px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero-left {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.hero-title {
+  font-size: 74px;
+}
+
+.hero-subtitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero-highlight {
+  color: #da4ea2;
+}
+
+.hero-desc {
+  font-size: 24px;
+  color: lightgray;
+}
+
+.hero-right {
+  flex: 3;
+  position: relative;
+}
+
+.hero-img {
+  width: 700px;
+  height: 500px;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  animation: float 2s infinite ease alternate;
+}
+
+@keyframes float {
+  to {
+    transform: translateY(20px);
+  }
+}
+
+/* -------- WHO SECTION -------- */
+.who-container {
+  height: 100vh;
+  width: 1400px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.who-left {
+  flex: 1;
+}
+
+.who-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.who-title {
+  font-size: 74px;
+}
+
+.who-subtitle {
+  color: #da4ea2;
+}
+
+.who-desc {
+  font-size: 24px;
+  color: lightgray;
+}
+
+/* -------- WORKS SECTION -------- */
+.works-section {
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5%;
+  color: #fff;
+}
+
+.works-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  width: 100%;
+}
+
+.works-left {
+  flex: 1;
+  padding-right: 50px;
+}
+
+.works-title {
+  font-size: 74px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #f4e1f9;
+}
+
+.works-highlight {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #da4ea2;
+}
+
+.works-desc {
+  font-size: 24px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  color: #ecd7f0;
+}
+
+.works-btn:hover {
+  background-color: #a349c9;
+}
+
+.works-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.works-img {
+  width: 600px; 
+  height: auto;
+  border-radius: 20px;
+  border: 2px solid #da4ea2;
+  box-shadow: 0 0 25px 5px #da4ea2;
+  object-fit: cover;
+  animation: float 2s infinite ease alternate;
+}
+
+/* -------- CONTACT SECTION -------- */
+.contact-section {
+  height: 100vh;
+  width: 100vw;
+  scroll-snap-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  backdrop-filter: blur(10px);
+}
+
+.contact-container {
+  width: 1400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+
+.contact-left {
+  flex: 1;
+}
+
+.contact-title {
+  font-size: 64px;
+  margin-bottom: 20px;
+  color: #da4ea2;
+}
+
+.contact-quote {
+  font-size: 20px;
+  color: lightgray;
+  line-height: 1.6;
+}
+
+.contact-right {
+  flex: 1;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background-color: #1a1a2e;
+  color: white;
+  box-shadow: 0 0 10px #da4ea2;
+}
+
+.contact-form button {
+  padding: 15px;
+  border: none;
+  background-color: #da4ea2;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #a02f78;
+}
+
